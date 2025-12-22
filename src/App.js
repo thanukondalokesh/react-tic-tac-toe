@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
+import Profile from "./components/Profile";
+import Counter from "./components/Counter";
+import Features from "./components/Features";
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -31,6 +34,7 @@ function App() {
 
   return (
     <div className="app">
+      {/* ================= TIC TAC TOE ================= */}
       <h1>Tic Tac Toe</h1>
 
       <div className="status">
@@ -54,6 +58,26 @@ function App() {
       <button className="reset" onClick={resetGame}>
         Restart Game
       </button>
+
+      <hr />
+
+      {/* ================= DAY 4: PROPS & STATE ================= */}
+      <h2>Day 4: Props & State</h2>
+
+      <Profile
+        name="Lokesh Thanukonda"
+        role="React Developer"
+        email="lokesh@example.com"
+      />
+
+      <Counter />
+
+      <hr />
+
+      {/* ================= DAY 5: EVENTS & CONDITIONAL RENDERING ================= */}
+      <h2>Day 5: Events & Conditional Rendering</h2>
+
+      <Features />
     </div>
   );
 }
