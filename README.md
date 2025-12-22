@@ -46,7 +46,7 @@ react-tic-tac-toe/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/react-tic-tac-toe.git
+   git clone https://github.com/thanukondalokesh/react-tic-tac-toe.git
 
 
 Navigate to project folder:
@@ -92,4 +92,4 @@ Mobile-first UI improvements
 
 Lokesh Thanukonda
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/thanukondalokesh
