@@ -3,6 +3,8 @@ import "./App.css";
 import Profile from "./components/Profile";
 import Counter from "./components/Counter";
 import Features from "./components/Features";
+import RegisterForm from "./components/RegisterForm";
+
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -78,6 +80,12 @@ function App() {
       <h2>Day 5: Events & Conditional Rendering</h2>
 
       <Features />
+
+      <hr />
+
+      <h2>Day 6: Forms – Controlled Components</h2>
+      <RegisterForm />
+
     </div>
   );
 }
