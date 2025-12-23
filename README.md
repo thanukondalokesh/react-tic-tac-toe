@@ -36,6 +36,40 @@ This project is created to practice React fundamentals such as components, state
 - Conditional rendering using boolean state
 - Rendering lists dynamically using `map()`
 
+### 📅 Day 6: Forms – Controlled Components
+
+**Deliverable:** User Registration Form
+
+In this phase, a **User Registration Form** was implemented using **controlled components** in React.  
+All input fields are fully managed by React state using the `useState` hook.
+
+#### 📁 Component Added
+
+
+#### 🔹 Key Concepts Covered
+- Controlled components in React
+- Form handling using `useState`
+- Single state object to manage multiple inputs
+- Event handling using `onChange` and `onSubmit`
+- Preventing default form submission behavior
+
+#### 🔹 How the Form Works
+1. User enters data into input fields
+2. `onChange` event updates React state
+3. Input values are rendered from state
+4. On submit, form data is captured as an object
+5. Success message is displayed after submission
+
+#### 🔹 Features Implemented
+- Username, Email, and Password fields
+- Reusable `handleChange` function
+- Clean and readable form layout
+- Ready for backend/API integration
+
+#### 🎯 Learning Outcome
+This task helped in understanding how React controls form inputs, manages user data efficiently, and handles form submissions in a structured way.
+
+
 ---
 
 ## 🛠️ Tech Stack
