@@ -72,6 +72,120 @@ This task helped in understanding how React controls form inputs, manages user d
 
 ---
 
+## 📅 Day 6: Forms – Controlled Components
+
+**Deliverable:** User Registration Form
+
+In this phase, a **User Registration Form** was implemented using **controlled components** in React.
+All input fields are fully controlled by React state using the `useState` hook.
+
+### 📁 New File Added
+
+* `src/components/RegisterForm.js`
+
+### 🔹 Key Concepts Covered
+
+* Controlled components in React
+* Managing form state using `useState`
+* Single state object for multiple inputs
+* Handling input changes using `onChange`
+* Preventing default form submission with `preventDefault()`
+
+### 🔹 How the Form Works
+
+1. User types into input fields
+2. `onChange` updates React state
+3. Input values are rendered from state
+4. On submit, form data is captured as an object
+5. Success message is displayed
+
+### 🎯 Learning Outcome
+
+This task helped understand how React controls form inputs, manages user data efficiently, and handles form submission in a clean and structured way.
+
+---
+
+## 📅 Day 7: React Router – Multi-Page Application
+
+**Deliverable:** Multi-page React App with Navigation
+
+On Day 7, the application was converted into a **multi-page React application** using **React Router**.
+Navigation was added to separate concerns and improve scalability.
+
+### 📁 New Files Added
+
+* `src/components/TicTacToe.js`
+* `src/pages/Home.js`
+* `src/pages/Game.js`
+* `src/pages/Register.js`
+
+### 🔹 Changes Implemented
+
+* Added **React Router (`react-router-dom`)**
+* Created multiple pages (Home, Game, Register)
+* Implemented navigation between pages
+* Refactored **Tic Tac Toe logic** into a separate reusable component
+* Updated `App.js` to manage routes
+* Updated `index.js` to wrap app with `BrowserRouter`
+
+### 🔹 Pages Overview
+
+* **Home Page:** Project overview and navigation
+* **Game Page:** Tic Tac Toe gameplay
+* **Register Page:** User registration form
+
+### 🎯 Learning Outcome
+
+This task helped understand routing, page-based architecture, navigation handling, and proper separation of components in a React application.
+
+---
+
+## 📂 Updated Project Structure (After Day 7)
+
+```
+react-tic-tac-toe/
+│
+├── src/
+│   ├── components/
+│   │   ├── Profile.js
+│   │   ├── Counter.js
+│   │   ├── Features.js
+│   │   ├── RegisterForm.js
+│   │   └── TicTacToe.js
+│   │
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── Game.js
+│   │   └── Register.js
+│   │
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+│
+├── public/
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
+## 🧠 Overall Learning Progress (Day 4 → Day 7)
+
+* Props & reusable components
+* State management using `useState`
+* Event handling & conditional rendering
+* Controlled forms
+* Multi-page routing with React Router
+* Component refactoring & clean folder structure
+* Proper Git workflow (`dev → main`)
+
+---
+
+
+---
+
 ## 🛠️ Tech Stack
 
 - **React.js**
