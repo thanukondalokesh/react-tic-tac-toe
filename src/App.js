@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import TicTacToe from "./components/TicTacToe";
@@ -7,6 +7,7 @@ import Profile from "./components/Profile";
 import Counter from "./components/Counter";
 import Features from "./components/Features";
 import RegisterForm from "./components/RegisterForm";
+import TaskManager from "./components/TaskManager";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
         <a href="/props">📘 Props & State</a>
         <a href="/events">📗 Events & Rendering</a>
         <a href="/register">📝 Forms</a>
+        <a href="/tasks">📋 Task Manager</a>
       </nav>
-
 
       {/* ================= ROUTES ================= */}
       <Routes>
@@ -34,7 +35,7 @@ function App() {
           path="/props"
           element={
             <>
-              <h2> Props & State</h2>
+              <h2>Props & State</h2>
               <Profile
                 name="Lokesh Thanukonda"
                 role="React Developer"
@@ -49,7 +50,7 @@ function App() {
           path="/events"
           element={
             <>
-              <h2> Events & Conditional Rendering</h2>
+              <h2>Events & Conditional Rendering</h2>
               <Features />
             </>
           }
@@ -59,8 +60,19 @@ function App() {
           path="/register"
           element={
             <>
-              <h2> Forms – Controlled Components</h2>
+              <h2>Forms – Controlled Components</h2>
               <RegisterForm />
+            </>
+          }
+        />
+
+        {/* ===== Day 9: Mini Project ===== */}
+        <Route
+          path="/tasks"
+          element={
+            <>
+              <h2>Day 9: Intern Task Manager App</h2>
+              <TaskManager />
             </>
           }
         />

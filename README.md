@@ -216,6 +216,37 @@ react-tic-tac-toe/
 └── README.md
 
 ````
+## 📅 Day 9: Mini Project – Intern Task Manager App
+
+### 📌 Project Overview
+The **Intern Task Manager App** is a mini React project built to practice
+**state management, CRUD operations, and component-based design**.
+It allows users to **add, view, and delete tasks** dynamically.
+
+This mini project simulates a real-world internal task tracking tool.
+
+---
+
+### 🚀 Features Implemented
+- ➕ Add new tasks
+- 👀 View task list instantly
+- ❌ Delete tasks individually
+- ⚡ Real-time UI updates using React state
+- 🧠 Uses `useState` hook for task management
+
+---
+
+### 🛠️ Concepts Covered
+- React functional components
+- `useState` hook
+- Controlled inputs
+- Event handling (`onClick`, `onChange`)
+- Conditional rendering
+- Rendering lists using `map()`
+
+---
+
+### 📁 New File Added
 
 ---
 
