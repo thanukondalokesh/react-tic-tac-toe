@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../App.css"; // make sure this is imported
 
 function Features() {
   const [showFeatures, setShowFeatures] = useState(true);
@@ -11,13 +12,16 @@ function Features() {
   ];
 
   return (
-    <div style={{ margin: "20px" }}>
-      <button onClick={() => setShowFeatures(!showFeatures)}>
-        {showFeatures ? "Hide Features" : "Show Features"}
+    <div className="features-container">
+      <button
+        className="toggle-btn"
+        onClick={() => setShowFeatures(!showFeatures)}
+      >
+        {showFeatures ? "Hide React Features" : "Show React Features"}
       </button>
 
       {showFeatures && (
-        <ul>
+        <ul className="feature-list">
           {featuresList.map((feature, index) => (
             <li key={index}>{feature}</li>
           ))}

@@ -1,113 +1,72 @@
-import React, { useState } from "react";
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+
+import TicTacToe from "./components/TicTacToe";
 import Profile from "./components/Profile";
 import Counter from "./components/Counter";
 import Features from "./components/Features";
 import RegisterForm from "./components/RegisterForm";
 
-
 function App() {
-  const [board, setBoard] = useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = useState(true);
-
-  const winner = calculateWinner(board);
-
-  function handleClick(index) {
-    if (board[index] || winner) return;
-
-    const newBoard = [...board];
-    newBoard[index] = isXNext ? "X" : "O";
-    setBoard(newBoard);
-    setIsXNext(!isXNext);
-  }
-
-  function resetGame() {
-    setBoard(Array(9).fill(null));
-    setIsXNext(true);
-  }
-
-  function renderSquare(index) {
-    return (
-      <button className="square" onClick={() => handleClick(index)}>
-        {board[index]}
-      </button>
-    );
-  }
-
   return (
     <div className="app">
-      {/* ================= TIC TAC TOE ================= */}
-      <h1>Tic Tac Toe</h1>
+      {/* ================= NAVIGATION ================= */}
+      <nav className="navbar">
+        <a href="/">🏠 Home</a>
+        <a href="/game">🎮 Game</a>
+        <a href="/props">📘 Props & State</a>
+        <a href="/events">📗 Events & Rendering</a>
+        <a href="/register">📝 Forms</a>
+      </nav>
 
-      <div className="status">
-        {winner
-          ? `Winner: ${winner}`
-          : board.includes(null)
-          ? `Next Player: ${isXNext ? "X" : "O"}`
-          : "Draw!"}
-      </div>
 
-      <div className="board">
-        {[0, 1, 2].map((row) => (
-          <div key={row} className="board-row">
-            {renderSquare(row * 3)}
-            {renderSquare(row * 3 + 1)}
-            {renderSquare(row * 3 + 2)}
-          </div>
-        ))}
-      </div>
+      {/* ================= ROUTES ================= */}
+      <Routes>
+        <Route
+          path="/"
+          element={<h2>Welcome to React Tic Tac Toe Application</h2>}
+        />
 
-      <button className="reset" onClick={resetGame}>
-        Restart Game
-      </button>
+        <Route path="/game" element={<TicTacToe />} />
 
-      <hr />
+        <Route
+          path="/props"
+          element={
+            <>
+              <h2> Props & State</h2>
+              <Profile
+                name="Lokesh Thanukonda"
+                role="React Developer"
+                email="lokesh@example.com"
+              />
+              <Counter />
+            </>
+          }
+        />
 
-      {/* ================= DAY 4: PROPS & STATE ================= */}
-      <h2>Day 4: Props & State</h2>
+        <Route
+          path="/events"
+          element={
+            <>
+              <h2> Events & Conditional Rendering</h2>
+              <Features />
+            </>
+          }
+        />
 
-      <Profile
-        name="Lokesh Thanukonda"
-        role="React Developer"
-        email="lokesh@example.com"
-      />
-
-      <Counter />
-
-      <hr />
-
-      {/* ================= DAY 5: EVENTS & CONDITIONAL RENDERING ================= */}
-      <h2>Day 5: Events & Conditional Rendering</h2>
-
-      <Features />
-
-      <hr />
-
-      <h2>Day 6: Forms – Controlled Components</h2>
-      <RegisterForm />
-
+        <Route
+          path="/register"
+          element={
+            <>
+              <h2> Forms – Controlled Components</h2>
+              <RegisterForm />
+            </>
+          }
+        />
+      </Routes>
     </div>
   );
-}
-
-function calculateWinner(board) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-
-  for (let [a, b, c] of lines) {
-    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-      return board[a];
-    }
-  }
-  return null;
 }
 
 export default App;
