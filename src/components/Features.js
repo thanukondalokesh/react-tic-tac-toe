@@ -13,6 +13,7 @@ function Features() {
 
   return (
     <div className="features-container">
+      <h2>Events & Conditional Rendering</h2>
       <button
         className="toggle-btn"
         onClick={() => setShowFeatures(!showFeatures)}

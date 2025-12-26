@@ -35,7 +35,6 @@ function App() {
           path="/props"
           element={
             <>
-              <h2>Props & State</h2>
               <Profile
                 name="Lokesh Thanukonda"
                 role="React Developer"
@@ -50,7 +49,6 @@ function App() {
           path="/events"
           element={
             <>
-              <h2>Events & Conditional Rendering</h2>
               <Features />
             </>
           }
@@ -60,7 +58,7 @@ function App() {
           path="/register"
           element={
             <>
-              <h2>Forms – Controlled Components</h2>
+              
               <RegisterForm />
             </>
           }
@@ -71,7 +69,7 @@ function App() {
           path="/tasks"
           element={
             <>
-              <h2>Day 9: Intern Task Manager App</h2>
+              
               <TaskManager />
             </>
           }
