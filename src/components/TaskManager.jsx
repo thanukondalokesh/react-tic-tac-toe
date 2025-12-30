@@ -15,21 +15,26 @@ function TaskManager() {
   }, [tasks]);
 
   function handleAddOrUpdateTask() {
-    if (task.trim() === "") return;
+  if (task.trim() === "") return;
 
-    if (editIndex !== null) {
-      // UPDATE TASK
-      const updatedTasks = [...tasks];
-      updatedTasks[editIndex] = task;
-      setTasks(updatedTasks);
-      setEditIndex(null);
-    } else {
-      // ADD TASK
-      setTasks([...tasks, task]);
-    }
+  if (editIndex !== null) {
+    // UPDATE TASK
+    const updatedTasks = [...tasks];
+    updatedTasks[editIndex] = task;
+    setTasks(updatedTasks);
+    setEditIndex(null);
 
-    setTask("");
+    alert("Task updated successfully"); // ✅ popup
+  } else {
+    // ADD TASK
+    setTasks([...tasks, task]);
+
+    alert("New task added successfully"); // ✅ popup
   }
+
+  setTask("");
+}
+
 
   function handleEditTask(index) {
     setTask(tasks[index]);
@@ -37,14 +42,17 @@ function TaskManager() {
   }
 
   function handleDeleteTask(index) {
-    const updatedTasks = tasks.filter((_, i) => i !== index);
-    setTasks(updatedTasks);
+  const confirmDelete = window.confirm(
+    "Are you sure you want to delete this task?"
+  );
 
-    if (editIndex === index) {
-      setEditIndex(null);
-      setTask("");
-    }
-  }
+  if (!confirmDelete) return;
+
+  const updatedTasks = tasks.filter((_, i) => i !== index);
+  setTasks(updatedTasks);
+
+  alert("Task deleted successfully");
+}
 
   return (
     <div className="task-container">
