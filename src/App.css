@@ -264,35 +264,66 @@ form button:hover {
   text-align: center;
 }
 
+/* Input + Add button */
 .task-input {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
+.task-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Task list */
 .task-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .task-list li {
-  background: white;
-  padding: 10px;
-  margin-bottom: 8px;
+  background: #ffffff;
+  padding: 10px 12px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  border-radius: 4px;
+  align-items: center;
+  border-radius: 6px;
+  text-align: left;
 }
 
+/* Task text */
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Action buttons container */
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* No task message */
 .no-task {
   color: #777;
+  font-size: 14px;
 }
+
+/* ================= BUTTON STYLES ================= */
+
+/* Add / Update */
 .btn-add {
   background-color: #2563eb; /* Blue */
   color: white;
   border: none;
   padding: 8px 16px;
-  margin-left: 8px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
@@ -301,6 +332,8 @@ form button:hover {
 .btn-add:hover {
   background-color: #1d4ed8;
 }
+
+/* Edit */
 .btn-edit {
   background-color: #facc15; /* Yellow */
   color: #000;
@@ -314,12 +347,13 @@ form button:hover {
 .btn-edit:hover {
   background-color: #eab308;
 }
+
+/* Delete */
 .btn-delete {
   background-color: #ef4444; /* Red */
   color: white;
   border: none;
   padding: 6px 12px;
-  margin-left: 6px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
