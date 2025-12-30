@@ -159,12 +159,15 @@ form button {
 form button:hover {
   background: #15803d;
 }
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 16px;   /* 👈 best spacing method */
+  gap: 16px;
   margin-bottom: 30px;
 }
+
 /* Features container */
 .features-container {
   margin: 20px;
@@ -188,9 +191,9 @@ form button:hover {
   background-color: #3730a3;
 }
 
-/* Clean list styling */
+/* Feature list */
 .feature-list {
-  list-style-position: inside; /* dots near text */
+  list-style-position: inside;
   padding: 0;
   margin: 0 auto;
   max-width: 320px;
@@ -202,6 +205,7 @@ form button:hover {
   font-size: 16px;
   font-weight: 500;
 }
+
 /* ================= COUNTER STYLES ================= */
 
 .counter-container {
@@ -234,30 +238,22 @@ form button:hover {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-/* Increment Button */
+/* Increment */
 .counter-buttons .increment {
   background-color: #28a745;
   color: white;
 }
 
-.counter-buttons .increment:hover {
-  background-color: #218838;
-  transform: translateY(-2px);
-}
-
-/* Decrement Button */
+/* Decrement */
 .counter-buttons .decrement {
   background-color: #dc3545;
   color: white;
 }
 
-.counter-buttons .decrement:hover {
-  background-color: #c82333;
-  transform: translateY(-2px);
-}
+/* ================= TASK MANAGER STYLES ================= */
+
 .task-container {
   max-width: 500px;
   margin: 40px auto;
@@ -274,21 +270,6 @@ form button:hover {
   margin-bottom: 20px;
 }
 
-.task-input input {
-  flex: 1;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.task-input button {
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
 .task-list {
   list-style: none;
   padding: 0;
@@ -303,15 +284,47 @@ form button:hover {
   border-radius: 4px;
 }
 
-.task-list button {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 5px 8px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
 .no-task {
   color: #777;
+}
+.btn-add {
+  background-color: #2563eb; /* Blue */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-add:hover {
+  background-color: #1d4ed8;
+}
+.btn-edit {
+  background-color: #facc15; /* Yellow */
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-edit:hover {
+  background-color: #eab308;
+}
+.btn-delete {
+  background-color: #ef4444; /* Red */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
 }
